@@ -19,4 +19,6 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-mocha" % "1.0.0")
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-scalariform" % "1.3.0")
 
+addSbtPlugin("com.github.play2war" % "play2-war-plugin" % "1.3-beta2")
+
 addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.0.1")

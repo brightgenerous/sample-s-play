@@ -1,3 +1,5 @@
+import com.github.play2war.plugin._
+
 name := """sample-s-play"""
 
 version := "1.0-SNAPSHOT"
@@ -12,5 +14,9 @@ libraryDependencies ++= Seq(
   cache,
   ws
 )
+
+Play2WarPlugin.play2WarSettings
+
+Play2WarKeys.servletVersion := "3.1"
 
 scalariformSettings
