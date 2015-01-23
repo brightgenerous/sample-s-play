@@ -12,7 +12,9 @@ libraryDependencies ++= Seq(
   jdbc,
   anorm,
   cache,
-  ws
+  ws,
+  "org.webjars" %% "webjars-play" % "2.3.0-2",
+  "org.webjars" % "jquery" % "1.11.1"
 )
 
 Play2WarPlugin.play2WarSettings
