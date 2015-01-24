@@ -1,5 +1,7 @@
 import com.github.play2war.plugin._
 
+import com.typesafe.sbt.web.Import.WebKeys._
+
 name := """sample-s-play"""
 
 version := "1.0-SNAPSHOT"
@@ -29,3 +31,5 @@ Play2WarKeys.servletVersion := "3.1"
 webModuleDirectory in TestAssets := webTarget.value / "node-modules" / "test"
 
 scalariformSettings
+
+javaOptions in Test += "-Dconfig.file=conf/test.conf"
