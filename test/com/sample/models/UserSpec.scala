@@ -15,7 +15,7 @@ class UserSpec extends Specification {
 
   implicit def app = FakeApplication(additionalConfiguration = inMemoryDatabase())
 
-  def db(implicit app: Application) = DB("specific")
+  def db(implicit app: Application) = DB("test")
 
   "User" should {
 
