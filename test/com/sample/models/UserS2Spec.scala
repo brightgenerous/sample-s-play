@@ -50,7 +50,7 @@ DAO.Users
   }
 
   implicit def app = FakeApplication(additionalConfiguration = inMemoryDatabase())
-  def db(implicit app: Application) = DB("specific")
+  def db(implicit app: Application) = DB("test")
 
   private[this] var first = true
 
