@@ -1,0 +1,8 @@
+# Admin Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Admin page
+GET     /                           controllers.AdminController.index
+
+GET     /admin                      controllers.AdminController.index
