@@ -3,6 +3,7 @@ package controllers
 import play.api.db.slick.Config.driver.simple._
 
 import play.api._
+import play.api.Play.current
 import play.api.data.Form
 import play.api.data.Forms._
 import play.api.db.slick._
@@ -11,6 +12,8 @@ import play.api.libs.json._
 
 import com.sample.models._
 import com.sample.models.DAO._
+
+import services._
 
 object UsersController extends Controller {
 
@@ -60,13 +63,8 @@ object UsersController extends Controller {
   }
 
   def show(id: Int) = DBAction { implicit s =>
-    val res = Users.filter(_.id === id).firstOption match {
-      case Some(user) => {
-        val json = Json.obj(
-          "data" -> userToJson(user)
-        )
-        Ok(json)
-      }
+    val res = UserJsonService.get(id) match {
+      case Some(json) => Ok(json)
       case _ => BadRequest
     }
     res.as("application/json")
